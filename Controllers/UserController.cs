@@ -14,7 +14,7 @@ namespace Shop.Controllers
     [Route("users")]
     public class UserController : Controller
     {
-        [HttpPost]
+        [HttpGet]
         [Route("")]
         [Authorize(Roles = "manager")]
         public async Task<ActionResult<List<User>>> Get(
@@ -32,7 +32,7 @@ namespace Shop.Controllers
 
         [HttpPost]
         [Route("")]
-        [Authorize(Roles = "manager")]
+        // [Authorize(Roles = "manager")]
         public async Task<ActionResult<User>> Post(
             [FromServices] DataContext context,
             [FromBody]User model)

@@ -26,7 +26,7 @@ namespace Shop.Controllers
         }
 
         [HttpGet]
-        [Route("")]
+        [Route("{id:int}")]
         [AllowAnonymous]
         public async Task<ActionResult<Product>> GetById(
             int id,
@@ -41,7 +41,7 @@ namespace Shop.Controllers
         }
 
         [HttpGet]
-        [Route("")]
+        [Route("categories/{id:int}")]
         [AllowAnonymous]
         public async Task<ActionResult<List<Product>>> GetByCategoryId(
             int id,
