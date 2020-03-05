@@ -30,8 +30,8 @@ namespace Shop
                 options.Providers.Add<GzipCompressionProvider>();
                 options.MimeTypes = ResponseCompressionDefaults.MimeTypes.Concat(new[] { "application/json" });
             });
-            
-            services.AddResponseCaching();
+
+            //services.AddResponseCaching();
             services.AddControllers();
 
             var key = Encoding.ASCII.GetBytes(Settings.Secret);
